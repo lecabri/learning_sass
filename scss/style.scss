@@ -1,0 +1,37 @@
+@import "variables";
+@import "button";
+@import "mixin";
+@import "media";
+@import "fonction";
+
+body {
+  background: $gray;
+  height: 100vh;
+  position: relative;
+  margin: 0;
+}
+
+.card {
+  box-sizing: border-box;
+  @include responsive(xs) {
+    background: red;
+  }
+  width: 500px;
+  height: 300px;
+  border: 1px solid #ccc;
+  border-radius: 2rem;
+  padding: 2rem;
+  background: white;
+  h1 {
+    font-size: 1.5rem;
+    border-bottom: 1px solid $gray;
+  }
+
+  ul {
+    @include reset-list;
+    @include inline-list;
+  }
+  position: absolute;
+  left: centerAbs(500px);
+  top: centerAbs(300px);
+}

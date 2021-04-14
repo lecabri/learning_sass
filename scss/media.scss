@@ -1,0 +1,13 @@
+@mixin xs {
+  @media only screen and (max-width: 500px) {
+    @content;
+  }
+}
+
+@mixin responsive($device) {
+  @if $device == xs {
+    @include xs {
+      @content;
+    }
+  }
+}
